@@ -8,7 +8,7 @@ const classData = [
 
 const Classes = () => {
     return (
-        <div className="w-full border border-gray-500 bg-gray-100 rounded-xl p-2">
+        <div className="w-full border mt-5 border-gray-500 bg-gray-100 rounded-xl p-2">
             <h2 className="font-bold">My Classes</h2>
             <div className="flex flex-col space-y-2">
                 {classData.map((item) => (
@@ -19,8 +19,11 @@ const Classes = () => {
                     />
                 ))}
             </div>
-            <div className="mt-4 w-[20%]">
-                <Button style="bg-green-700 text-white">
+            <div>
+
+            </div>
+            <div className="mt-4 w-[40%]">
+                <Button style="bg-green-700 text-white  cursor-pointer">
                     <span className="text-sm"> + Create New Class</span>
                 </Button>
             </div>

@@ -12,8 +12,8 @@ const ClassItem = ({ title, studentCount, assessmentCount }: ClassProps) => {
             <p className="text-sm">
                 {studentCount} students . {assessmentCount} assessments
             </p>
-            <div className="mt-4 w-[20%]">
-                <Button style="bg-blue-600 text-white">
+            <div className="mt-4 w-[30%] text-sm">
+                <Button style="bg-blue-600 text-white  cursor-pointer">
                     <span>View Class</span>
                 </Button>
             </div>
