@@ -1,69 +1,179 @@
-# React + TypeScript + Vite
+# 🎓 TopBoard – CoLab Grading System (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+TopBoard is a user-friendly school grading system designed for CoLab tutors and students. This frontend interface enables tutors to manage classes, assessments, and student records, while students can sign up, sign in, and view their academic data in real-time. This repository contains only the frontend logic.
 
-Currently, two official plugins are available:
+## 📚 Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Features](#features)
+- [User Roles](#user-roles)
+- [Tech Stack](#tech-stack)
+- [Live Design Preview](#-live-design-preview)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Usage Guide](#usage-guide)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Features
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- ✍️ Tutor & Student sign-up/sign-in pages
+- 📊 Tutor dashboard with:
+  - Active class stats
+  - Total student count
+  - Active assessments
+  - Pending grades
+- 📚 Class management (grade entry, editing, and performance tracking)
+- 🧮 Student Dashboard (planned: classes, assessments, grades, rankings)
+- 📤 **Assignment submission forms** _(planned)_
+- 🏆 **Class Leaderboard** _(planned)_
+- 🧑‍🏫 Role-based input and access control (Tutor vs Student)
+- 📱 Clean and responsive UI with Tailwind CSS
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 👥 User Roles
+
+### 🧑‍🏫 Tutors
+
+- Sign-in/Sign-up securely
+- View and manage classes
+- Enter and edit student scores
+
+### 🎓 Students
+
+- Sign-in/Sign-up securely
+- View scores and assessments
+- Track progress on leaderboard _(planned)_
+
+---
+
+## 🧰 Tech Stack
+
+- **React** (with TypeScript)
+- **Tailwind CSS** for styling
+- **Component-Based Architecture**
+- **HTML/CSS/JS** standards
+
+---
+
+## 🎨 Live Design Preview
+
+You can view the UI wireframe design here:  
+👉 [TopBoard Wireframe](https://colabfullstackclass.github.io/wireframe/)
+
+This design represents the intended layout, component structure, and user interaction flow for both tutors and students.
+
+---
+
+## 🗂 Project Structure
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+TopBoard/
+├── components/
+│   ├── AppNav.tsx
+│   ├── Classes.tsx
+│   ├── ClassItem.tsx
+│   ├── Navbar.tsx
+│   └── register/
+│       ├── SignIn.tsx
+│       └── SignUp.tsx
+├── components/ui/
+│   ├── Button.tsx
+│   ├── Input.tsx
+│   ├── StatsCard.tsx
+│   └── ActionTabs.tsx
+├── pages/
+│   ├── TutorDashboard.tsx
+│   └── Register.tsx
+├── App.tsx
+└── main.tsx
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## ⚙️ Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/ColabFullstackClass/TopBoard.git
+cd TopBoard
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Start the Development Server
+
+```bash
+npm run dev
+# or
+npm start
+```
+
+---
+
+## 🚀 Usage Guide
+
+### Tutor Flow:
+
+1. Visit the Sign Up page and register as a **Tutor**
+2. Log in via the Sign In page
+3. On successful login, view the dashboard:
+   - See class statistics
+   - View or manage class list
+4. Use the "Create New Class" button to simulate adding a class
+
+### Student Flow:
+
+1. Register as a **Student**
+2. Log in to access student-specific views _(planned)_
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch:
+
+```bash
+git checkout -b feature/my-new-feature
+```
+
+3. Commit your changes:
+
+```bash
+git commit -m "Add my new feature"
+```
+
+4. Push to your branch:
+
+```bash
+git push origin feature/my-new-feature
+```
+
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 🙋 Contact
+
+For questions, suggestions, or issues, please reach out to the organization or project maintainers.
+
+```
+
+---
 ```
