@@ -1,5 +1,6 @@
 import AppNav from "../components/AppNav";
 import Classes from "../components/Classes";
+import RecentActivities from "../components/RecentActivities";
 import StatsCard from "../components/ui/StatsCard";
 const statsData = [
     { amount: 3, description: "Active Classes" },
@@ -21,6 +22,7 @@ const TutorDashboard = () => {
             </div>
             <div className="flex space-x-2">
                 <Classes />
+                <RecentActivities/>
             </div>
         </div>
     );
