@@ -139,27 +139,38 @@ npm start
 ---
 
 ## 🤝 Contributing
+We welcome contributions from the community! To add a new feature or fix a bug, please follow the steps below:
 
-1. Fork the repository
-2. Create your feature branch:
-
-```bash
-git checkout -b feature/my-new-feature
-```
-
-3. Commit your changes:
+🔧 Contribution Workflow
+1. Fork the repository to your Github account.
+2. Clone your fork to your local machine:
 
 ```bash
-git commit -m "Add my new feature"
+git clone https://github.com/your-username/TopBoard.git
+cd TopBoard
+
 ```
 
-4. Push to your branch:
+3. Create a new branch for your feature or fix.
+ - Ensure the branch name clearly describes your feature:
 
 ```bash
-git push origin feature/my-new-feature
+git checkout -b feature/your-feature-name
 ```
 
-5. Open a Pull Request
+4. Implement your feature or fix in your branch.
+5. Push your changes to your fork:
+
+```bash
+git push origin feature/your-feature-name
+```
+
+5. Create a Pull Request to the main branch of this repository.
+   - Be sure to describe your changes.
+   - Mention the issue it resolves (if any) using: Closes #issue-number
+
+6. Wait for review or comments from the maintainers
+7. If your PR is approved and merged. 🎉 hurray!
 
 ---
 
