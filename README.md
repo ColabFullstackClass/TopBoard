@@ -61,7 +61,7 @@ TopBoard is a user-friendly school grading system designed for CoLab tutors and 
 ## 🎨 Live Design Preview
 
 You can view the UI design here:  
-👉 [TopBoard Wireframe]([https://colabfullstackclass.github.io/wireframe/](https://www.figma.com/design/njXG0r5uMsFnxWl8g45f4A/fs-class?node-id=0-1&p=f&t=baEXr6SdGl1Ic3DB-0))
+👉 [TopBoard Design](https://www.figma.com/design/njXG0r5uMsFnxWl8g45f4A/fs-class?node-id=0-1&p=f&t=baEXr6SdGl1Ic3DB-0)
 
 This design represents the intended layout, component structure, and user interaction flow for both tutors and students.
 
