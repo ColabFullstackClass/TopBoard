@@ -1,8 +1,6 @@
 import { useState } from "react";
 import Button from "../ui/Button";
 import Input from "../ui/Input";
-
-// For FontAwesomeIcon icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClipboardCheck } from "@fortawesome/free-solid-svg-icons";
 
@@ -19,16 +17,12 @@ const SignIn = () => {
       return;
     }
     setError("");
-
     alert(`Signed in as ${email} (${userType})`);
   };
 
-  // const
-
   return (
-    //   <div className="border-4 rounded-2xl w-200 mt-30 ml-auto mr-auto flex flex-col text-center pl-8 pr-8">
-    <div>
-      <div className="text-center text-4xl text-blue-600 pt-0 pb-0">
+    <div className="min-h-screen flex flex-col items-center justify-center px-4">
+      <div className="text-center text-4xl text-blue-600">
         <FontAwesomeIcon icon={faClipboardCheck} />
       </div>
 
@@ -40,8 +34,7 @@ const SignIn = () => {
       </p>
 
       <form
-        action=""
-        className=" border-2 border-white shadow-2xl rounded-xl w-155 ml-auto mr-auto outline-white flex flex-col space-y-3 pt-14 pb-10 pl-30 pr-30 ml-10 mr-10 text-black"
+        className="border-2 border-white shadow-2xl rounded-xl w-full max-w-sm md:max-w-md p-6 md:p-10 bg-white space-y-4"
         onSubmit={handleSubmit}
       >
         {error && <p className="text-red-500 text-sm text-center">{error}</p>}
@@ -51,62 +44,50 @@ const SignIn = () => {
           inputType="email"
           placeholder="Enter your email"
           value={email}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-            setEmail(e.target.value)
-          }
+          onChange={(e) => setEmail(e.target.value)}
         />
         <Input
           labelName="Password"
           inputType="password"
           placeholder="Enter your password"
           value={password}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-            setPassword(e.target.value)
-          }
+          onChange={(e) => setPassword(e.target.value)}
         />
+
         <div>
           <p>I am a :</p>
-          <div className="flex space-x-3">
-            <p className="w-70 h-10 pt-1 pl-3 border bg-gray-200 border-gray-100 rounded-4xl">
+          <div className="flex space-x-3 w-full">
+            <label className="flex items-center justify-between flex-1 px-3 py-2 bg-gray-200 rounded-full cursor-pointer">
               Tutor
               <input
                 type="radio"
                 name="userType"
-                id="tutor"
-                className="ml-25 mt-1.75"
                 checked={userType === "Tutor"}
                 onChange={() => setUserType("Tutor")}
-              />{" "}
-            </p>
-            <p className="w-70 h-10 pt-1 pl-5  border bg-gray-200 border-gray-100 rounded-4xl">
+              />
+            </label>
+            <label className="flex items-center justify-between flex-1 px-3 py-2 bg-gray-200 rounded-full cursor-pointer">
               Student
               <input
                 type="radio"
                 name="userType"
-                id="student"
-                className="ml-20 mt-1.75"
                 checked={userType === "Student"}
                 onChange={() => setUserType("Student")}
-              />{" "}
-            </p>
+              />
+            </label>
           </div>
         </div>
-        <div>
-          <Button
-            style="text-white bg-black"
-            onClick={handleSubmit}
-          >
-            <span> Sign In</span>
-          </Button>
-        </div>
-        <div>
-          <p className="text-sm text-gray-500 text-center">
-            Don't have an account?{" "}
-            <a href="" className="text-blue-400 underline">
-              Sign up here
-            </a>
-          </p>
-        </div>
+
+        <Button style="text-white bg-black w-full py-2" onClick={handleSubmit}>
+          <span>Sign In</span>
+        </Button>
+
+        <p className="text-sm text-gray-500 text-center">
+          Don't have an account?{" "}
+          <a href="" className="text-blue-400 underline">
+            Sign up here
+          </a>
+        </p>
       </form>
     </div>
   );
