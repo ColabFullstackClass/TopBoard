@@ -1,29 +1,68 @@
 import { useState } from "react";
 import Button from "../ui/Button";
 import Input from "../ui/Input";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClipboardCheck } from "@fortawesome/free-solid-svg-icons";
 
 const SignIn = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [userType, setUserType] = useState("");
-  const [error, setError] = useState("");
+
+  // This is to handle the useState for all the form fields 
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+    userType: "",
+  });
+
+  // This is to handle the useState for all the error messages
+  const [errors, setErrors] = useState({
+    email: "",
+    password: "",
+    userType: "",
+  });
+
+  
+  const validate = () => {
+    let newErrors = { email: "", password: "", userType: "" };
+    let isValid = true;
+
+    // email validation
+    if (!formData.email) {
+      newErrors.email = "Email is required.";
+      isValid = false;
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Please enter a valid email.";
+      isValid = false;
+    }
+
+    // password validation
+    if (!formData.password) {
+      newErrors.password = "Password is required.";
+      isValid = false;
+    } else if (formData.password.length < 6) {
+      newErrors.password = "Password must be at least 6 characters.";
+      isValid = false;
+    }
+
+    // userType validation
+    if (!formData.userType) {
+      newErrors.userType = "Please select Tutor or Student.";
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email || !password || !userType) {
-      setError("Please fill in all fields.");
-      return;
-    }
-    setError("");
-    alert(`Signed in as ${email} (${userType})`);
+    if (!validate()) return;
+
+    alert(`Signed in as ${formData.email} (${formData.userType})`);
   };
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4">
+      {/* Logo */}
       <div className="text-center text-4xl text-blue-600">
-        <FontAwesomeIcon icon={faClipboardCheck} />
+        <img src="../public/img/image12.png" alt="TopBoard Logo" />
       </div>
 
       <h1 className="font-bold text-3xl text-center pt-2 pb-2 text-blue-600">
@@ -37,23 +76,39 @@ const SignIn = () => {
         className="border-2 border-white shadow-2xl rounded-xl w-full max-w-sm md:max-w-md p-6 md:p-10 bg-white space-y-4"
         onSubmit={handleSubmit}
       >
-        {error && <p className="text-red-500 text-sm text-center">{error}</p>}
+        {/* Email */}
+        <div>
+          <Input
+            labelName="Email Address"
+            inputType="email"
+            placeholder="Enter your email"
+            value={formData.email}
+            onChange={(e) =>
+              setFormData({ ...formData, email: e.target.value })
+            }
+          />
+          {errors.email && (
+            <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+          )}
+        </div>
 
-        <Input
-          labelName="Email Address"
-          inputType="email"
-          placeholder="Enter your email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <Input
-          labelName="Password"
-          inputType="password"
-          placeholder="Enter your password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+        {/* Password */}
+        <div>
+          <Input
+            labelName="Password"
+            inputType="password"
+            placeholder="Enter your password"
+            value={formData.password}
+            onChange={(e) =>
+              setFormData({ ...formData, password: e.target.value })
+            }
+          />
+          {errors.password && (
+            <p className="text-red-500 text-xs mt-1">{errors.password}</p>
+          )}
+        </div>
 
+        {/* User Type */}
         <div>
           <p>I am a :</p>
           <div className="flex space-x-3 w-full">
@@ -62,8 +117,8 @@ const SignIn = () => {
               <input
                 type="radio"
                 name="userType"
-                checked={userType === "Tutor"}
-                onChange={() => setUserType("Tutor")}
+                checked={formData.userType === "Tutor"}
+                onChange={() => setFormData({ ...formData, userType: "Tutor" })}
               />
             </label>
             <label className="flex items-center justify-between flex-1 px-3 py-2 bg-gray-200 rounded-full cursor-pointer">
@@ -71,13 +126,19 @@ const SignIn = () => {
               <input
                 type="radio"
                 name="userType"
-                checked={userType === "Student"}
-                onChange={() => setUserType("Student")}
+                checked={formData.userType === "Student"}
+                onChange={() =>
+                  setFormData({ ...formData, userType: "Student" })
+                }
               />
             </label>
           </div>
+          {errors.userType && (
+            <p className="text-red-500 text-xs mt-1">{errors.userType}</p>
+          )}
         </div>
 
+        {/* Button */}
         <Button style="text-white bg-black w-full py-2" onClick={handleSubmit}>
           <span>Sign In</span>
         </Button>
