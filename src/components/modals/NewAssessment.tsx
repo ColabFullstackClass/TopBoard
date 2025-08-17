@@ -17,14 +17,15 @@ const CreateAssessment: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-gray-100 p-4">
-      <div className="bg-white rounded-2xl shadow-lg p-6 w-full max-w-lg">
+    <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex justify-center overflow-y-auto">
+      <div className="min-h-full bg-white rounded-2xl shadow-lg p-6 w-full max-w-xl my-10">
         <h2 className="text-lg font-semibold mb-4 text-gray-800">
           <span className="text-gray-400 text-sm mr-2">Assessment | </span>
           Create New Assessment 
           <span className="text-gray-400 ml-2">REACT 001</span>
         </h2>
 
+        <form onSubmit={(e) => e.preventDefault()}>
         {/* Assessment Title */}
         <div className="mb-4">
           <label className="text-gray-500 text-sm mb-1 block">Assessment Title</label>
@@ -108,7 +109,7 @@ const CreateAssessment: React.FC = () => {
           </div>
 
           {/* Submission Link */}
-          <div className="mb-6">
+          <div className="mb-4">
             <label className="text-gray-500 text-sm mb-1 block">Submission Links</label>
             <input
               name="submissionLink"
@@ -116,20 +117,23 @@ const CreateAssessment: React.FC = () => {
               onChange={handleChange}
               type="url"
               placeholder="Paste link here"
-              className="w-full mb-6 p-3 bg-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full p-3 bg-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
           </div>
 
           {/* Buttons */}
-          <div className="flex justify-end gap-4">
+          <div className="flex justify-end gap-4 mt-6">
             <button
-            className="cursor-pointer bg-white text-gray-600 border border-gray-300 py-3 px-6 rounded-3xl"
+              type="button"
+              className="cursor-pointer bg-white text-gray-600 border border-gray-300 py-3 px-6 rounded-3xl"
             >Save As Draft</button>
 
             <button
+              type="submit"
               className="cursor-pointer py-3 px-6 bg-black text-white rounded-3xl"
             >Create Assessment</button>
           </div>
+        </form>
       </div>
     </div>
   );
