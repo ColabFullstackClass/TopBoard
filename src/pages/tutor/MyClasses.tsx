@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import StudentTab from "./StudentTab";
+import StudentTab from "../../components/dasboard/StudentTab";
 // import { AddStudentModal } from "./AddStudentModal";
 
 type TabType = "tab1" | "tab2" | "tab3";
