@@ -2,11 +2,11 @@ import { Home, BookOpen, FileText, LogOut } from "lucide-react";
 
 export default function Sidebar() {
   return (
-    <div className="h-screen w-56 bg-gray-900 text-gray-200 flex flex-col rounded-br-3xl">
+    <div className="h-screen w-56 bg-gray-900 text-gray-200 flex flex-col rounded-br-4xl">
       {/* Logo */}
       <div className="flex items-center gap-2 p-4 border-b border-gray-800">
         <img
-          src="https://via.placeholder.com/24"
+          src="/img/logo.png"
           alt="Logo"
           className="w-6 h-6"
         />
@@ -14,7 +14,7 @@ export default function Sidebar() {
       </div>
 
       {/* Navigation */}
-      <nav className="flex flex-col mt-4 gap-1">
+      <nav className="flex flex-col mt-4 gap-1 space-y-6">
         <div className="flex items-center gap-2 bg-white text-gray-900 rounded-l-full px-4 py-2">
           <Home size={18} />
           <span>Home</span>

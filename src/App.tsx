@@ -15,6 +15,7 @@ import TutorAssessments from "./pages/tutor/Assessments";
 import StudentHome from "./pages/student/Home";
 import StudentMyClasses from "./pages/student/MyClasses";
 import StudentAssessments from "./pages/student/Assessments";
+import Sidebar from "./components/Dashboard/Sidebar";
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
             </Routes>
           </div>
         </Router>
+        <Sidebar />
         
       </>
     );
