@@ -11,7 +11,7 @@ const Input = ({ labelName, inputType, placeholder }: InputProps) => {
             </label>
             <input
                 type={inputType}
-                className="w-full py-3 px-1 border border-gray-100 rounded-xl"
+                className="w-full py-3 px-4 border border-gray-200 rounded-full focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors"
                 placeholder={placeholder}
             />
         </div>
