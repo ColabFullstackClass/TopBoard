@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import StudentTab from "../../components/dasboard/StudentTab";
+import TutorAssessments from "./Assessments";
+import { VscSettings } from "react-icons/vsc";
 // import { AddStudentModal } from "./AddStudentModal";
 
 type TabType = "tab1" | "tab2" | "tab3";
@@ -56,17 +58,32 @@ const TutorMyClasses: React.FC = () => {
             </button>
           </span>
 
-          <span className="flex">
-            <p className="text-gray-500">class ||</p>
-            <p>React Fundamentals</p>
-          </span>
+          {activeTab === "tab1" && (
+            <span className="flex">
+              <p className="text-gray-500">class ||</p>
+              <p>React Fundamentals</p>
+            </span>
+          )}
+          {activeTab === "tab2" && (
+            <span className="flex gap-8">
+              <button className="flex justify-center items-center gap-2 cursor-pointer mb-2">
+                <VscSettings />
+                Filter
+              </button>
+              <button className="bg-[#029BD9] text-white py-2 px-4 rounded-3xl cursor-pointer mb-2">
+                Create New Assesment
+              </button>
+            </span>
+          )}
         </div>
 
         {/* Tab Content */}
         <div className="">
           {activeTab === "tab1" && <StudentTab students={[]} />}
           {activeTab === "tab2" && (
-            <section>This is content for Tab 2.</section>
+            <section>
+              <TutorAssessments assessments={[]} />
+            </section>
           )}
           {activeTab === "tab3" && (
             <section>This is content for Tab 3.</section>

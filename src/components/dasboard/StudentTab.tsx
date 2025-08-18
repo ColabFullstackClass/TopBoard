@@ -16,20 +16,20 @@ interface StudentsTableProps {
 const StudentTab: React.FC<StudentsTableProps> = ({ students }) => {
   return (
     <>
-      <main className="flex gap-20">
+      <main className="flex gap-20 max-w-min">
         <section className="">
           <article className="flex justify-between my-5 gap-4">
-            <div className="bg-gray-200 space-y-8 rounded-3xl w-96 h-36 flex flex-col justify-center items-center">
+            <div className="bg-[#F4F4F4] space-y-8 rounded-3xl w-96 h-36 flex flex-col justify-center items-center">
               <h2 className="text-4xl font-bold">React 101</h2>
               <p className="text-gray-500">Class code</p>
             </div>
-            <div className="bg-gray-200 space-y-8 rounded-3xl w-96 h-36 flex flex-col justify-center items-center">
+            <div className="bg-[#F4F4F4] space-y-8 rounded-3xl w-96 h-36 flex flex-col justify-center items-center">
               <h2 className="text-4xl font-bold">{students.length}</h2>
               <p className="text-gray-500">Total Number of students</p>
             </div>
-            <div className="bg-gray-200 space-y-8 rounded-3xl w-96 h-36 flex flex-col justify-center items-center">
-              <h2 className="text-4xl font-bold">89</h2>
-              <p className="text-gray-500">Class created</p>
+            <div className="bg-[#F4F4F4] space-y-8 rounded-3xl w-96 h-36 flex flex-col justify-center items-center">
+              <h2 className="text-4xl font-bold">0</h2>
+              <p className="text-gray-500">Classes created</p>
             </div>
           </article>
           <article className="mt-14">
@@ -56,19 +56,19 @@ const StudentTab: React.FC<StudentsTableProps> = ({ students }) => {
             Quick Stats <IoIosArrowDown />
           </p>
           <article className="space-y-4">
-            <div className="bg-gray-200 space-y-8 rounded-3xl w-72 h-36 flex flex-col justify-center items-center">
-              <h2 className="text-4xl font-bold text-green-600">0%</h2>
+            <div className="bg-[#F4F4F4] space-y-8 rounded-3xl w-72 h-36 flex flex-col justify-center items-center">
+              <h2 className="text-4xl font-bold text-[#059669]">0%</h2>
               <p className="text-gray-500">Average Grade</p>
             </div>
-            <div className="bg-gray-200 space-y-8 rounded-3xl w-72 h-36 flex flex-col justify-center items-center">
+            <div className="bg-[#F4F4F4] space-y-8 rounded-3xl w-72 h-36 flex flex-col justify-center items-center">
               <h2 className="text-4xl font-bold">0</h2>
               <p className="text-gray-500">Pending Submissions</p>
             </div>
-            <div className="bg-gray-200 space-y-8 rounded-3xl w-72 h-36 flex flex-col justify-center items-center">
+            <div className="bg-[#F4F4F4] space-y-8 rounded-3xl w-72 h-36 flex flex-col justify-center items-center">
               <h2 className="text-4xl font-bold">0</h2>
               <p className="text-gray-500">Active Students</p>
             </div>
-            <div className="bg-gray-200 space-y-8 rounded-3xl w-72 h-36 flex flex-col justify-center items-center">
+            <div className="bg-[#F4F4F4] space-y-8 rounded-3xl w-72 h-36 flex flex-col justify-center items-center">
               <h2 className="text-4xl font-bold">0</h2>
               <p className="text-gray-500">Total Assesments</p>
             </div>

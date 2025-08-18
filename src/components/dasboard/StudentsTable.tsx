@@ -14,7 +14,7 @@ interface StudentsTableProps {
 const StudentsTable: React.FC<StudentsTableProps> = ({ students }) => {
   return (
     <table className="w-full text-gray-500 border border-solid border-transparent rounded-xl">
-      <thead className="bg-gray-200">
+      <thead className="bg-[#F4F4F4]">
         <tr>
           <th className="p-4">Student ID</th>
           <th>Name</th>
@@ -37,7 +37,7 @@ const StudentsTable: React.FC<StudentsTableProps> = ({ students }) => {
               <td className="p-4">{student.id}</td>
               <td>{student.name}</td>
               <td>{student.email}</td>
-              <td>{student.grade}</td>
+              <td className="text-[#059669]">{student.grade}</td>
               <td>{student.status}</td>
               <td>
                 <button className="text-gray-500">
