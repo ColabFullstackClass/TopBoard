@@ -23,7 +23,7 @@ const StudentTab: React.FC<StudentsTableProps> = ({ students }) => {
               <h2 className="text-4xl font-bold">React 101</h2>
               <p className="text-gray-500">Class code</p>
             </div>
-            <div className="bg-[#F4F4F4] space-y-8 rounded-3xl w-96 h-36 flex flex-col justify-center items-center">
+            <div className="bg-[#F4F4F4] space-y-8 rounded-3xl w-[40%] h-36 flex flex-col justify-center items-center">
               <h2 className="text-4xl font-bold">{students.length}</h2>
               <p className="text-gray-500">Total Number of students</p>
             </div>
@@ -51,8 +51,8 @@ const StudentTab: React.FC<StudentsTableProps> = ({ students }) => {
             </div>
           </article>
         </section>
-        <section className="w-32 relative -top-8">
-          <p className="flex items-center gap-8 w-48 text-gray-500 mb-6 text-right border-b border-gray-300 pb-2">
+        <section className="w-32 mt-5">
+          <p className="flex items-center justify-between w-56 text-gray-500 ml-5 mb-6 text-right border-b border-gray-300 pb-2">
             Quick Stats <IoIosArrowDown />
           </p>
           <article className="space-y-4">
