@@ -1,9 +1,9 @@
 import React from "react";
 import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-    Navigate,
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
 } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import Home from "./pages/Home";
@@ -50,7 +50,6 @@ function App() {
           </div>
         </Router>
         <Sidebar />
-        
       </>
     );
 }

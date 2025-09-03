@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet, useLocation } from "react-router-dom";
+import {Outlet, useLocation} from "react-router-dom";
 import DashboardNav from "../components/DashboardNav";
 
 const Dashboard: React.FC = () => {

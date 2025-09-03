@@ -1,3 +1,4 @@
+
 import { Plus, SlidersHorizontal } from "lucide-react";
 import Classes from "../../components/tutor/Classes";
 import Activites from "../../components/tutor/Activites";
