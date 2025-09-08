@@ -1,14 +1,18 @@
+
+import React from "react";
+
 interface ButtonProps {
-    children: any;
+    children: React.ReactNode;
     style: string;
-    clickHandler?: () => void; //? makes it optional props
+    onClick?: (e?: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const Button = ({ children, style, clickHandler }: ButtonProps) => {
+const Button = ({ children, style, onClick }: ButtonProps) => {
     return (
         <button
-            className={`w-full rounded-xl text-center py-3 ${style}`}
-            onClick={clickHandler}
+            className={`w-full rounded-4xl text-center py-3 cursor-pointer ${style}`}
+            onClick={onClick}
+            type="button"
         >
             {children}
         </button>
