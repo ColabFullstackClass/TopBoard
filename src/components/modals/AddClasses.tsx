@@ -2,7 +2,7 @@ import React from "react";
 
 const CreateAssessmentModal: React.FC = () => {
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+    <div className="fixed inset-0 flex items-center justify-center bg-white bg-opacity-50">
       <div className="bg-white rounded-lg shadow-lg p-6 w-[659px]">
         <h2 className="text-sm text-gray-500 mb-1">
           Assessment{" "}

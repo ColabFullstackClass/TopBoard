@@ -15,6 +15,7 @@ import TutorAssessments from "./pages/tutor/Assessments";
 import StudentHome from "./pages/student/Home";
 import StudentMyClasses from "./pages/student/MyClasses";
 import StudentAssessments from "./pages/student/Assessments";
+import AddClasses from "./components/modals/AddClasses";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
           {/* Catch all route - redirect to home */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
+        <AddClasses />
       </div>
     </Router>
   );

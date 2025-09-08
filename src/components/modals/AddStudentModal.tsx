@@ -9,7 +9,6 @@ const AddStudentOverlay: React.FC = () => {
           <p className="px-4 py-2 text-sm font-medium border-black text-black">
             Student Enrollment
           </p>
-          <span>||</span>
 
           <p className="px-4 py-2 text-sm font-medium text-gray-500">
             Add New Student
