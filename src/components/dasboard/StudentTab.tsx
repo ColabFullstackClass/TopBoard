@@ -3,6 +3,7 @@ import StudentsTable from "./StudentsTable";
 import {SlPlus} from "react-icons/sl";
 import {IoIosArrowDown} from "react-icons/io";
 
+
 interface StudentsTableProps {
   students: {
     id: string;
@@ -13,7 +14,8 @@ interface StudentsTableProps {
   }[];
 }
 
-const StudentTab: React.FC<StudentsTableProps> = ({students}) => {
+
+const StudentTab: React.FC<StudentsTableProps> = ({ students }) => {
   return (
     <>
       <main className="flex gap-20 max-w-min">
