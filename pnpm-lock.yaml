@@ -13,9 +13,10 @@ importers:
       "@types/react-router-dom":
         specifier: ^5.3.3
         version: 5.3.3
-      lucide-react:
-        specifier: ^0.539.0
-        version: 0.539.0(react@19.1.0)
+
+      classnames:
+        specifier: ^2.5.1
+        version: 2.5.1
       react:
         specifier: ^19.1.0
         version: 19.1.0
@@ -26,8 +27,9 @@ importers:
         specifier: ^5.5.0
         version: 5.5.0(react@19.1.0)
       react-router-dom:
-        specifier: ^7.8.0
-        version: 7.8.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: ^7.8.1
+        version: 7.8.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+
       tailwindcss:
         specifier: ^4.1.11
         version: 4.1.11
@@ -1154,6 +1156,9 @@ packages:
       }
     engines: { node: ">=18" }
 
+  classnames@2.5.1:
+    resolution: {integrity: sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow==}
+
   color-convert@2.0.1:
     resolution:
       {
@@ -1926,22 +1931,37 @@ packages:
       }
     engines: { node: ">=0.10.0" }
 
+<<<<<<< HEAD
   react-router-dom@7.8.0:
     resolution:
       {
         integrity: sha512-ntInsnDVnVRdtSu6ODmTQ41cbluak/ENeTif7GBce0L6eztFg6/e1hXAysFQI8X25C8ipKmT9cClbJwxx3Kaqw==,
       }
     engines: { node: ">=20.0.0" }
+=======
+  react-router-dom@7.8.1:
+    resolution: {integrity: sha512-NkgBCF3sVgCiAWIlSt89GR2PLaksMpoo3HDCorpRfnCEfdtRPLiuTf+CNXvqZMI5SJLZCLpVCvcZrTdtGW64xQ==}
+
+    engines: {node: '>=20.0.0'}
+>>>>>>> 90aa138c41722f3c1a29de172b415c02320f07b6
     peerDependencies:
       react: ">=18"
       react-dom: ">=18"
 
+<<<<<<< HEAD
   react-router@7.8.0:
     resolution:
       {
         integrity: sha512-r15M3+LHKgM4SOapNmsH3smAizWds1vJ0Z9C4mWaKnT9/wD7+d/0jYcj6LmOvonkrO4Rgdyp4KQ/29gWN2i1eg==,
       }
     engines: { node: ">=20.0.0" }
+=======
+
+  react-router@7.8.1:
+    resolution: {integrity: sha512-5cy/M8DHcG51/KUIka1nfZ2QeylS4PJRs6TT8I4PF5axVsI5JUxp0hC0NZ/AEEj8Vw7xsEoD7L/6FY+zoYaOGA==}
+
+    engines: {node: '>=20.0.0'}
+>>>>>>> 90aa138c41722f3c1a29de172b415c02320f07b6
     peerDependencies:
       react: ">=18"
       react-dom: ">=18"
@@ -2824,6 +2844,8 @@ snapshots:
 
   chownr@3.0.0: {}
 
+  classnames@2.5.1: {}
+
   color-convert@2.0.1:
     dependencies:
       color-name: 1.1.4
@@ -3231,6 +3253,7 @@ snapshots:
 
   react-refresh@0.17.0: {}
 
+
   react-router-dom@7.8.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
       react: 19.1.0
@@ -3238,6 +3261,7 @@ snapshots:
       react-router: 7.8.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
 
   react-router@7.8.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+
     dependencies:
       cookie: 1.0.2
       react: 19.1.0
