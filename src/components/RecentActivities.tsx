@@ -1,5 +1,5 @@
+import RecentItem from "./RecentItems";
 import Button from "./ui/Button";
-import RecentItem from "./Recentitems";
 const RecentData = [
   {
     title: "New Submission",
