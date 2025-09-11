@@ -9,19 +9,18 @@ const Navbar: React.FC = () => {
         TUTOR'S DASHBOARD
       </div>
 
-      <div className="relative w-64">
-        <input
-          type="text"
-          placeholder="Search"
-          className="w-full border border-gray-300 rounded-full py-1 pl-8 pr-3 text-sm focus:outline-none focus:ring-1 focus:ring-gray-400"
-        />
-        <Search
-          size={16}
-          className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-400"
-        />
-      </div>
-
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-5">
+        <div className="relative w-64">
+          <input
+            type="text"
+            placeholder="Search"
+            className="w-full border border-gray-300 rounded-full py-2 pl-8 pr-3 text-sm focus:outline-none focus:ring-1 focus:ring-gray-400"
+          />
+          <Search
+            size={16}
+            className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-400"
+          />
+        </div>
         <button className="relative p-2 rounded-full hover:bg-gray-100">
           <Bell size={18} className="text-gray-500" />
           <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>

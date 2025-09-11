@@ -1,7 +1,8 @@
 import React from "react";
 import StudentsTable from "./StudentsTable";
-import { SlPlus } from "react-icons/sl";
-import { IoIosArrowDown } from "react-icons/io";
+import {SlPlus} from "react-icons/sl";
+import {IoIosArrowDown} from "react-icons/io";
+
 
 interface StudentsTableProps {
   students: {
@@ -12,6 +13,7 @@ interface StudentsTableProps {
     status: string;
   }[];
 }
+
 
 const StudentTab: React.FC<StudentsTableProps> = ({ students }) => {
   return (
