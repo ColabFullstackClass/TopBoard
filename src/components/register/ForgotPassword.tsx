@@ -30,12 +30,12 @@ const ForgotPassword: React.FC = () => {
 						</p>
 					</div>
 
-					<div className="mt-6">
+					<div className="mt-6 p-0 ">
 						<Input labelName="Email Address" inputType="email" placeholder="Enter your email" />
 					</div>
 
-					<div className="mt-6 rounded-full">
-						<Button style="bg-gray-900 text-white">
+					<div className="mt-6 pb-3">
+						<Button style="bg-gray-900 text-white rounded-full">
 							Send reset link
 						</Button>
 					</div>

@@ -18,6 +18,7 @@ import StudentMyClasses from "./pages/student/MyClasses";
 import StudentAssessments from "./pages/student/Assessments";
 import ForgotPassword from "./components/register/ForgotPassword";
 
+
 function AppContent() {
     const location = useLocation();
     const hideNavigation = location.pathname === "/forgot-password";
@@ -58,6 +59,8 @@ function App() {
         <Router>
             <AppContent />
         </Router>
+        
+        
     );
 }
 

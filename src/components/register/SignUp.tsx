@@ -1,6 +1,7 @@
 import Button from "../ui/Button";
 import Input from "../ui/Input";
 
+
 const SignUp = () => {
     return (
         <form action="" className="flex flex-col space-y-3 mt-5">
