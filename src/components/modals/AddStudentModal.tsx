@@ -6,12 +6,13 @@ const AddStudentOverlay: React.FC = () => {
       <div className="bg-white rounded-2xl p-6 w-[659px] shadow-lg">
         {/* Tabs */}
         <div className="flex border-b border-gray-200 mb-6">
-          <button className="px-4 py-2 text-sm font-medium border-b-2 border-black text-black">
+          <p className="px-4 py-2 text-sm font-medium border-black text-black">
             Student Enrollment
-          </button>
-          <button className="px-4 py-2 text-sm font-medium text-gray-500">
+          </p>
+
+          <p className="px-4 py-2 text-sm font-medium text-gray-500">
             Add New Student
-          </button>
+          </p>
         </div>
 
         {/* Form */}
