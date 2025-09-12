@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 // import SignUp from '../components/register/SignUp';
 import SignIn from "../components/register/SignIn";
 
@@ -18,10 +18,9 @@ const Register: React.FC = () => {
         //         </div>
                  </div>
             </div> */}
-        </>
-        
+
             <SignIn />
-        
+
             {/* <div className="min-h-screen flex items-center justify-center bg-gray-50">
                 <div className="max-w-md w-full space-y-8">
                     <div>
