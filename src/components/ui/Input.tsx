@@ -21,21 +21,10 @@ const Input = ({
             </label>
             <input
                 type={inputType}
-                name={
-                    labelName === "Email Address"
-                        ? "email"
-                        : labelName === "Password"
-                        ? "password"
-                        : ""
-                }
-                className="w-full py-3 px-4 border border-gray-100 rounded-4xl bg-gray-50 "
+                className="w-full py-3 px-4 border border-gray-200 rounded-full focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors"
                 placeholder={placeholder}
                 value={value}
                 onChange={onChange}
-                className="w-full py-3 px-1 pl-6 pr-6 border bg-gray-200 border-gray-100 rounded-4xl"
-                placeholder={placeholder}
-                onChange={onChange}
-                value={value}
             />
         </div>
     );
