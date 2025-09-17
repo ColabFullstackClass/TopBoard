@@ -66,7 +66,7 @@ const SignIn = () => {
         <div className="min-h-screen flex flex-col items-center justify-center px-4">
             {/* Logo */}
             <div className="text-center text-4xl text-blue-600">
-                <img src="../public/img/image12.png" alt="TopBoard Logo" />
+                <img src="/img/image12.png" alt="TopBoard Logo" className="h-12 w-auto" />
             </div>
 
             <h1 className="font-bold text-3xl text-center pt-2 pb-2 text-blue-600">
@@ -160,9 +160,9 @@ const SignIn = () => {
                 </div>
 
                 {/* Button */}
-                <Button
+                                <Button
                     style="text-white bg-black w-full py-2"
-                    onClick={handleSubmit}
+                    type="submit"
                 >
                     <span>Sign In</span>
                 </Button>
