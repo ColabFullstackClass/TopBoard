@@ -8,7 +8,7 @@ import {
 import Register from "./pages/Register";
 import DashboardLayout from "./pages/DashboardLayout";
 import TutorHome from "./pages/tutor/Home";
-import TutorMyClasses from "./pages/tutor/MyClasses";
+import Tutor from "./pages/tutor/MyClasses";
 import TutorAssessments from "./pages/tutor/Assessments";
 import StudentHome from "./pages/student/Home";
 // import StudentMyClasses from "./pages/student/MyClasses";
@@ -28,8 +28,11 @@ function AppContent() {
                 <Route path="/dashboard/t" element={<DashboardLayout />}>
                     <Route index element={<TutorHome />} />
                     <Route path="home" element={<TutorHome />} />
-                    <Route path="my-classes" element={<TutorMyClasses />} />
-                    <Route path="assessments" element={<TutorAssessments />} />
+                    <Route path="my-classes" element={<Tutor />} />
+                    <Route
+                        path="assessments"
+                        element={<TutorAssessments assessments={[]} />}
+                    />
                 </Route>
 
                 {/* Student Dashboard Routes */}
