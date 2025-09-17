@@ -33,10 +33,10 @@ function AppContent() {
                     <Route path="assessments" element={<TutorAssessments assessments={[]} />} />
                 </Route>
 
-                {/* Standalone Leaderboard without sidebar/navbar */}
+                
                 <Route path="/dashboard/t/leaderboard" element={<TutorLeaderboard />} />
 
-                {/* Student Dashboard Routes */}
+            
                 <Route path="/dashboard/s" element={<DashboardLayout />}>
                     <Route index element={<StudentHome />} />
                     <Route path="home" element={<StudentHome />} />
