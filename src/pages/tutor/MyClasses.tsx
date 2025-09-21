@@ -17,7 +17,7 @@ const TutorMyClasses: React.FC = () => {
     }`;
 
   return (
-    <div className="w-full">
+    <div className="w-full pr-15">
       {/* uncomment to show original page content */}
       {/* <div className="bg-white shadow rounded-lg p-6">
         <h2 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -26,7 +26,7 @@ const TutorMyClasses: React.FC = () => {
         <p className="text-gray-600">Hello World - Manage your classes here</p>
       </div> */}
 
-      <div className="mt-8">
+      <div className="mt-8  p-6">
         <div className="relative mb-6">
           {/* Tabs */}
           <div className="flex justify-between items-center border-b border-gray-300 pb-2 mb-6">
@@ -52,23 +52,24 @@ const TutorMyClasses: React.FC = () => {
             </div>
 
             {activeTab === "tab1" && (
-              <div className="flex items-center gap-20">
+              <div className="flex items-center gap-15">
                 <div className="flex items-center">
                   <span className="text-gray-500 text-sm">class ||</span>
                   <span className="ml-1 text-sm text-gray-800 font-medium">React Fundamentals</span>
                 </div>
-                <div className="flex items-center gap-25 text-gray-500">
+                <div className="flex items-center gap-25 pr-10 text-gray-500">
                   <span className="text-sm">Quick Stats</span>
-                  
+
+
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="ml-1">
                     <path d="M19 9L12 16L5 9" stroke="#9CA3AF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                 
-                  <button className="text-sm text-gray-500">
-                    <img src="/Vector.png" alt="Quick Stats Icon" />
-                  </button>
-                  </div>
+
+                
+
+
                 </div>
+              </div>
             )}
 
             {activeTab === "tab2" && (

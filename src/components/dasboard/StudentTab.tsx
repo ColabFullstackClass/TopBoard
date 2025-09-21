@@ -54,19 +54,19 @@ const StudentTab: React.FC<StudentsTableProps> = ({ students }) => {
         </section>
         <section className="w-80 pr-15">
           <article className="space-y-6">
-            <div className="bg-gray-100 rounded-2xl p-6 flex flex-col items-center justify-center shadow-sm">
+            <div className="bg-gray-100 rounded-2xl p-4 flex flex-col items-center justify-center shadow-sm">
               <h2 className="text-4xl font-bold text-green-500 mb-2">87%</h2>
               <p className="text-gray-500">Average grade</p>
             </div>
-            <div className="bg-gray-100 rounded-2xl p-6 flex flex-col items-center justify-center shadow-sm">
+            <div className="bg-gray-100 rounded-2xl p-4 flex flex-col items-center justify-center shadow-sm">
               <h2 className="text-4xl font-bold mb-2">0</h2>
               <p className="text-gray-500">Pending Submissions</p>
             </div>
-            <div className="bg-gray-100 rounded-2xl p-6 flex flex-col items-center justify-center shadow-sm">
+            <div className="bg-gray-100 rounded-2xl p-4 flex flex-col items-center justify-center shadow-sm">
               <h2 className="text-4xl font-bold mb-2">21</h2>
               <p className="text-gray-500">Active Students</p>
             </div>
-            <div className="bg-gray-100 rounded-2xl p-6 flex flex-col items-center justify-center shadow-sm">
+            <div className="bg-gray-100 rounded-2xl p-4 flex flex-col items-center justify-center shadow-sm">
               <h2 className="text-4xl font-bold mb-2">12</h2>
               <p className="text-gray-500">Total Assessment</p>
             </div>
