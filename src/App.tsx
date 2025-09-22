@@ -10,6 +10,7 @@ import DashboardLayout from "./pages/DashboardLayout";
 import TutorHome from "./pages/tutor/Home";
 import TutorMyClasses from "./pages/tutor/MyClasses";
 import TutorAssessments from "./pages/tutor/Assessments";
+import TutorLeaderboard from "./pages/tutor/Leaderboard";
 import StudentHome from "./pages/student/Home";
 // import StudentMyClasses from "./pages/student/MyClasses";
 // import StudentAssessments from "./pages/student/Assessment";
@@ -29,10 +30,13 @@ function AppContent() {
                     <Route index element={<TutorHome />} />
                     <Route path="home" element={<TutorHome />} />
                     <Route path="my-classes" element={<TutorMyClasses />} />
-                    <Route path="assessments" element={<TutorAssessments />} />
+                    <Route path="assessments" element={<TutorAssessments assessments={[]} />} />
                 </Route>
 
-                {/* Student Dashboard Routes */}
+                
+                <Route path="/dashboard/t/leaderboard" element={<TutorLeaderboard />} />
+
+            
                 <Route path="/dashboard/s" element={<DashboardLayout />}>
                     <Route index element={<StudentHome />} />
                     <Route path="home" element={<StudentHome />} />
