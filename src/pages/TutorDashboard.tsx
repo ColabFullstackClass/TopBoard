@@ -20,6 +20,7 @@ const TutorDashboard = () => {
       <div className="flex space-x-2">
         <Classes />
         <RecentActivities />
+        
       </div>
     </div>
   );

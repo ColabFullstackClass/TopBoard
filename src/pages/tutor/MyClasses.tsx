@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import StudentTab from "../../components/dasboard/StudentTab";
-import TutorAssessments from "./Assessments";
+// import TutorAssessments from "./Assessments";
 import { VscSettings } from "react-icons/vsc";
 
 // import { AddStudentModal } from "./AddStudentModal";
@@ -34,7 +34,7 @@ const TutorMyClasses: React.FC = () => {
         </h2>
         <p className="text-gray-600">Hello World - Manage your classes here</p>
       </div> */}
-
+        
       <div className="w-full mt-8">
         {/* Tabs */}
         <div className="flex justify-between border-b border-gray-300">
