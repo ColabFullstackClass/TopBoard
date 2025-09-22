@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import StudentTab from "../../components/dasboard/StudentTab";
+
+
 import { VscSettings } from "react-icons/vsc";
 import StudentData from "../../Data/StudentData";
 import MyClassesHomePage from "./MyClassesHomePage";
@@ -27,7 +29,7 @@ const TutorMyClasses: React.FC = () => {
           My Classes
         </h2>
         <p className="text-gray-600">Hello World - Manage your classes here</p>
-      </div> */}
+      </di>
 
       <div className="mt-8">
         <div className="relative mb-6">
@@ -39,6 +41,7 @@ const TutorMyClasses: React.FC = () => {
                 className={tabClasses("tab0")}
               >
                 Home
+
               </button>
               <button
                 onClick={() => setActiveTab("tab1")}
