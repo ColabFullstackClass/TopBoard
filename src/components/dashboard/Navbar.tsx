@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
     // const basePath = isTutorDashboard ? "/dashboard/t" : "/dashboard/s";
     const dashboardType = isTutorDashboard ? "Tutor" : "Student";
     return (
-        <nav className="relative w-[90dvw] bg-white shadow-sm px-4 py-4 flex items-center justify-between">
+        <nav className="relative  bg-white shadow-sm px-4 py-4 flex items-center justify-between">
             <h1 className="text-xl uppercase font-bold text-[#B6B9C9]">
                 {dashboardType} Dashboard
             </h1>
@@ -36,9 +36,9 @@ const Navbar: React.FC = () => {
 
                 <div className="flex items-center bg-gray-100 rounded-full px-2 py-1 mr-4 gap-2">
                     <div className="w-6 h-6 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white text-xs font-bold">
-                        T
+                        {isTutorDashboard ? "T" : "S"}
                     </div>
-                    <span className="text-sm text-gray-700">Tutor's Name</span>
+                    <span className="text-sm text-gray-700">{isTutorDashboard ? "Tutor's Name" : "Student's Name"}</span>
                 </div>
             </div>
         </nav>

@@ -11,10 +11,11 @@ import TutorHome from "./pages/tutor/Home";
 import Tutor from "./pages/tutor/MyClasses";
 import TutorAssessments from "./pages/tutor/Assessments";
 import StudentHome from "./pages/student/Home";
-// import StudentMyClasses from "./pages/student/MyClasses";
-// import StudentAssessments from "./pages/student/Assessment";
+//import StudentMyClasses from "./pages/student/MyClasses";
+import SubmitAssessment from "./pages/student/SubmitAssessment";
 import ForgotPassword from "./components/register/ForgotPassword";
 import MyClasses from "./components/Dashboard/student/MyClasses";
+
 
 function AppContent() {
     return (
@@ -40,10 +41,7 @@ function AppContent() {
                     <Route index element={<StudentHome />} />
                     <Route path="home" element={<StudentHome />} />
                     <Route path="my-classes" element={<MyClasses />} />
-                    {/* <Route
-                        path="assessments"
-                        element={<StudentAssessments />}
-                    /> */}
+                    <Route path="submit-assessment" element={<SubmitAssessment />} />
                 </Route>
 
                 {/* Catch all route - redirect to home */}

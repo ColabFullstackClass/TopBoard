@@ -7,13 +7,13 @@ import Navbar from "../components/dashboard/Navbar";
 const DashboardLayout: React.FC = () => {
     return (
         <div className="min-h-screen bg-white flex justify-start">
-            <div className="w-[15dvw]">
+            <div className="">
                 <Sidebar />
             </div>
 
-            <div className="w-[100dvw] ">
+            <div className="ml-[10dvw] w-[90dvw] ">
                 <Navbar />
-                <div className="py-6 sm:px-6 lg:px-8">
+                <div className="py-1 sm:px-6 lg:px-8">
                     {/* <DashboardNav basePath={basePath} /> */}
                     <div className="mt-6 px-6">
                         <Outlet />
