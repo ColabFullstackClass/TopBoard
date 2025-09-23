@@ -8,15 +8,17 @@ import {
 import Register from "./pages/Register";
 import DashboardLayout from "./pages/DashboardLayout";
 import TutorHome from "./pages/tutor/Home";
-import Tutor from "./pages/tutor/MyClasses";
+import TutorMyClasses from "./pages/tutor/MyClasses";
 import TutorAssessments from "./pages/tutor/Assessments";
 import StudentHome from "./pages/student/Home";
-// import StudentMyClasses from "./pages/student/MyClasses";
-// import StudentAssessments from "./pages/student/Assessment";
 import ForgotPassword from "./components/register/ForgotPassword";
 import MyClasses from "./components/Dashboard/student/MyClasses";
+import GradeAssessments from "./pages/tutor/GradeAssessments";
+import TutorLeaderboard from "./pages/tutor/Leaderboard";
 
 function AppContent() {
+
+    // GradeAssessments
     return (
         <div className="w-full">
             <Routes>
@@ -26,16 +28,25 @@ function AppContent() {
 
                 {/* Tutor Dashboard Routes */}
                 <Route path="/dashboard/t" element={<DashboardLayout />}>
-                    <Route index element={<TutorHome />} />
-                    <Route path="home" element={<TutorHome />} />
-                    <Route path="my-classes" element={<Tutor />} />
+                    {/* <Route index element={<TutorHome />} /> */}
+                    <Route path="home" element={<TutorHome />} />TutorAssessments
+                    <Route path="my-classes" element={<TutorMyClasses />} />
                     <Route
                         path="assessments"
-                        element={<TutorAssessments assessments={[]} />}
+                        element={
+                            <TutorAssessments
+                                assessments={[]}
+                            />
+                        }
                     />
                 </Route>
+                
+                <Route path="/dashboard/t/grade-assessments" element={<GradeAssessments />} />
 
-                {/* Student Dashboard Routes */}
+                
+                <Route path="/dashboard/t/leaderboard" element={<TutorLeaderboard />} />
+
+            
                 <Route path="/dashboard/s" element={<DashboardLayout />}>
                     <Route index element={<StudentHome />} />
                     <Route path="home" element={<StudentHome />} />
