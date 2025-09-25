@@ -1,4 +1,4 @@
-import ClassCard from "./ClassCard";
+import ClassCard from "../../dashboard/student/ClassCard";
 
 const MyClasses = () => {
     return (

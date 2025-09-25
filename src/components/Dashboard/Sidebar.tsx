@@ -2,7 +2,7 @@ import { Home, BookOpen, FileText, LogOut } from "lucide-react";
 
 export default function Sidebar() {
     return (
-        <div className="h-screen w-full bg-gray-900 text-gray-200 flex flex-col rounded-br-4xl">
+        <div className="h-screen fixed w-[10dvw] bg-gray-900 text-gray-200 rounded-br-4xl">
             {/* Logo */}
             <div className="flex items-center gap-2 p-4 border-b border-gray-800">
                 <img src="/img/logo.png" alt="Logo" className="w-6 h-6" />

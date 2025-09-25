@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import MyClasses from "../../components/Dashboard/student/MyClasses";
-import HeaderSection from "../../components/Dashboard/student/HeaderSection";
-import QuickStats from "../../components/Dashboard/student/QuickStats";
-import RecentGradesDropdown from "../../components/Dashboard/student/RecentGradesDropdown";
+import QuickStats from "../../components/dashboard/student/QuickStats";
+import HeaderSection from "../../components/dashboard/student/HeaderSection";
+import RecentGradesDropdown from "../../components/dashboard/student/RecentGradesDropdown";
 
 const StudentHome: React.FC = () => {
     const [activeTab, setActiveTab] = useState("My Classes");

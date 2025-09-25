@@ -3,14 +3,14 @@ import Classes from "../components/Classes";
 import RecentActivities from "../components/RecentActivities";
 import StatsCard from "../components/ui/StatsCard";
 const statsData = [
-  {amount: 3, description: "Active Classes"},
-  {amount: 47, description: "Total Students"},
-  {amount: 12, description: "Active Assessments"},
-  {amount: 89, description: "Pending Grades"},
+  { amount: 3, description: "Active Classes" },
+  { amount: 47, description: "Total Students" },
+  { amount: 12, description: "Active Assessments" },
+  { amount: 89, description: "Pending Grades" },
 ];
 const TutorDashboard = () => {
   return (
-    <div className="px-3 py-2">
+    <div className="min-h-screen w-full bg-gray-50 p-4">
       <AppNav userName="John Doe" />
       <div className="mt-4 flex space-x-2">
         {statsData.map((stat) => (

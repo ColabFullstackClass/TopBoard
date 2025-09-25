@@ -9,16 +9,19 @@ import Register from "./pages/Register";
 import DashboardLayout from "./pages/DashboardLayout";
 import TutorHome from "./pages/tutor/Home";
 import TutorMyClasses from "./pages/tutor/MyClasses";
-
+import TutorAssessments from "./pages/tutor/Assessments";
 import StudentHome from "./pages/student/Home";
-import StudentMyClasses from "./pages/student/MyClasses";
-import StudentAssessments from "./pages/student/Assessment";
+//import StudentMyClasses from "./pages/student/MyClasses";
+import SubmitAssessment from "./pages/student/SubmitAssessment";
 import ForgotPassword from "./components/register/ForgotPassword";
 import MyClasses from "./components/Dashboard/student/MyClasses";
-import TutorAssessments from "./pages/tutor/Assessments";
 import GradeAssessments from "./pages/tutor/GradeAssessments";
+import TutorLeaderboard from "./pages/tutor/Leaderboard";
+
 
 function AppContent() {
+
+    // GradeAssessments
     return (
         <div className="w-full">
             <Routes>
@@ -29,12 +32,19 @@ function AppContent() {
                 {/* Tutor Dashboard Routes */}
                 <Route path="/dashboard/t" element={<DashboardLayout />}>
                     {/* <Route index element={<TutorHome />} /> */}
-                    <Route path="home" element={<TutorHome />} />
-                    <Route path="my-classes" element={<TutorMyClasses />} /
-                    
-
-                    <Route path="assessments" element={<TutorAssessments assessments={[]} />} />
+                    <Route path="home" element={<TutorHome />} />TutorAssessments
+                    <Route path="my-classes" element={<TutorMyClasses />} />
+                    <Route
+                        path="assessments"
+                        element={
+                            <TutorAssessments
+                                assessments={[]}
+                            />
+                        }
+                    />
                 </Route>
+                
+                <Route path="/dashboard/t/grade-assessments" element={<GradeAssessments />} />
 
                 
                 <Route path="/dashboard/t/leaderboard" element={<TutorLeaderboard />} />
@@ -44,10 +54,7 @@ function AppContent() {
                     <Route index element={<StudentHome />} />
                     <Route path="home" element={<StudentHome />} />
                     <Route path="my-classes" element={<MyClasses />} />
-                    {/* <Route
-                        path="assessments"
-                        element={<StudentAssessments />}
-                    /> */}
+                    <Route path="submit-assessment" element={<SubmitAssessment />} />
                 </Route>
 
                 {/* Catch all route - redirect to home */}

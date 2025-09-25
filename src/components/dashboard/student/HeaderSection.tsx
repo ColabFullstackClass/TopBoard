@@ -17,7 +17,7 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({
             <p className="text-[14px] leading-[100%] font-normal text-[#8E91A1]">
                 Manage your classes and activities smoothly
             </p>
-            <div className="flex justify-between border-b border-[#F4F4F4] mt-4">
+            <div className="flex justify-between border-b border-[#F4F4F4] mt-8">
                 <div className="gap-4 flex">
                     <button
                         onClick={() => changeActiveTab("My Classes")}
