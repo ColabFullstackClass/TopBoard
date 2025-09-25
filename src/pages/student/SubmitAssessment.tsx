@@ -1,21 +1,13 @@
-import React, { useState } from "react";
 import QuickStats from "../../components/dashboard/student/QuickStats";
-import HeaderSection from "../../components/dashboard/student/HeaderSection";
 import RecentGradesDropdown from "../../components/dashboard/student/RecentGradesDropdown";
 
 
 
 const SubmitAssessment: React.FC = () => {
-  const [activeTab, setActiveTab] = useState("Student Assessment");
 
   return (
     <div className="flex flex-col lg:flex-row w-full h-full gap-10 bg-[#ffff]">
       <div className="flex-1">
-        <HeaderSection
-          changeActiveTab={setActiveTab}
-          activeTab={activeTab}
-        />
-
         {/* Assessment Submission Card */}
         <div className="bg-white shadow-md rounded-2xl p-6 mt-6 ">
           {/* Title */}
